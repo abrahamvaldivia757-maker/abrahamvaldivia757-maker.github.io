@@ -295,6 +295,8 @@
     opacity: 0;
     pointer-events: none;
   }
+
+  
   
   /* ====== CONTENIDO PRINCIPAL ====== */
   .main-content {
@@ -505,6 +507,330 @@
       padding: 10px;
     }
   }
+  /* ============================================
+   RESPONSIVE DESIGN - MÓVILES Y TABLETS
+   ============================================ */
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 3rem !important;
+  }
+  
+  .glass-strong, .glass {
+    padding: 1.5rem !important;
+  }
+  
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Móviles grandes (hasta 768px) */
+@media (max-width: 768px) {
+  /* Ajuste del sidebar */
+  .sidebar {
+    width: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.expanded {
+    width: 280px;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 0.75rem;
+  }
+  
+  .sidebar-toggle {
+    right: -45px;
+    top: 15px;
+    background: rgba(2, 6, 23, 0.95);
+    border-radius: 0 8px 8px 0;
+    padding: 12px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  /* Header y carrusel */
+  #inicio {
+    height: 350px !important;
+    border-radius: 1rem !important;
+  }
+  
+  #inicio h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  #inicio p {
+    font-size: 1rem !important;
+  }
+  
+  #inicio .flex {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  #inicio a {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.875rem;
+  }
+  
+  /* Logo en header */
+  #inicio .absolute.top-8 {
+    width: 70px !important;
+    height: 70px !important;
+    top: 1rem !important;
+    left: 1rem !important;
+  }
+  
+  /* Grids */
+  .grid.md\:grid-cols-2,
+  .grid.md\:grid-cols-3,
+  .grid.lg\:grid-cols-4,
+  .grid.sm\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Galería de mantenimiento - mantener 2 columnas en móvil */
+  .maintenance-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem;
+  }
+  
+  .maintenance-card img {
+    height: 150px;
+  }
+  
+  /* Tarjetas de proceso */
+  .grid.md\:grid-cols-2.lg\:grid-cols-4,
+  .grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Videos */
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Desarrolladores */
+  #desarrolladores .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  #desarrolladores img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  /* Panel overlay */
+  .panel {
+    width: 95% !important;
+    padding: 1rem !important;
+    max-height: 85vh;
+  }
+  
+  #panel-content {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  /* Widget Eli.ai */
+  #eli-widget {
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+  
+  #eli-chat {
+    width: calc(100vw - 20px) !important;
+    height: 60vh !important;
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+  }
+  
+  #eli-toggle-btn {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  /* Glosario */
+  #glosario-botones {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+  
+  /* Textos */
+  p, li {
+    font-size: 0.9375rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  /* Botones de navegación */
+  .sidebar-nav a {
+    padding: 12px 16px;
+  }
+  
+  /* Resumen del proceso */
+  .flex-wrap {
+    gap: 0.5rem !important;
+  }
+  
+  .flex-wrap > div {
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  #inicio {
+    height: 280px !important;
+  }
+  
+  #inicio h1 {
+    font-size: 1.5rem !important;
+    padding: 0 0.5rem;
+  }
+  
+  #inicio p {
+    font-size: 0.875rem !important;
+  }
+  
+  .glass-strong, .glass {
+    padding: 1rem !important;
+    border-radius: 1rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  h4 {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Tarjetas de proceso más compactas */
+  .bg-gradient-to-br {
+    padding: 1rem !important;
+  }
+  
+  .bg-gradient-to-br h5 {
+    font-size: 1rem !important;
+  }
+  
+  .bg-gradient-to-br .text-2xl {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Mantenimiento cards */
+  .maintenance-gallery {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Panel de imágenes */
+  #panel-content {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Footer */
+  footer {
+    font-size: 0.75rem;
+  }
+  
+  /* Intro */
+  .intro-logo {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  .intro-text {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2em !important;
+  }
+  
+  .loading-bar {
+    width: 200px !important;
+  }
+}
+
+/* Ajustes para orientación landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+  #inicio {
+    height: 200px !important;
+  }
+  
+  .sidebar.expanded {
+    width: 100% !important;
+  }
+  
+  #eli-chat {
+    height: 80vh !important;
+  }
+}
+
+/* Mejoras de accesibilidad táctil */
+@media (hover: none) and (pointer: coarse) {
+  .hover-lift:hover {
+    transform: none;
+  }
+  
+  .sidebar-nav a:hover {
+    transform: none;
+  }
+  
+  .maintenance-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Aumentar áreas táctiles */
+  button, 
+  .sidebar-nav a,
+  .close-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Fix para el modal de imágenes en móvil */
+@media (max-width: 768px) {
+  #image-modal .max-w-4xl {
+    margin: 1rem;
+  }
+  
+  #image-modal .close-btn {
+    top: -40px !important;
+    right: 0 !important;
+  }
+}
+
+/* Scroll suave en iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevenir zoom en inputs en iOS */
+input, textarea, select {
+  font-size: 16px;
+}
 </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-blue-50">
@@ -2001,6 +2327,7 @@ const s = document.createElement('style');
 s.textContent = '#eli-messages::-webkit-scrollbar{width:6px;}#eli-messages::-webkit-scrollbar-track{background:#0f172a;}#eli-messages::-webkit-scrollbar-thumb{background:#3b82f6;border-radius:3px;}';
 document.head.appendChild(s);
 </script>
+  
 
 </body>
 </html>
